@@ -41,8 +41,8 @@ mandisi-portfolio/
 │   │   └── Article.jsx / .module.css
 │   ├── styles/
 │   │   └── global.css
-│   ├── App.jsx            ← router + layout
-│   └── main.jsx           ← entry point
+│   ├── App.jsx           
+│   └── main.jsx           
 ├── index.html
 ├── vite.config.js
 └── package.json
@@ -80,28 +80,3 @@ src/data/content.js
 ```
 
 Edit that file to add projects, update roles, or change tech stack details. No need to touch component files.
-
-## CV download
-
-The CV is served as a static asset from `/public/`. To update it:
-
-1. Drop the new PDF into `/public/`
-2. Update the filename reference in `Navbar.jsx` and `Contact.jsx` if needed
-
-```
-
-## Design system
-
-| Token | Value |
-|-------|-------|
-| `--orange` | `#e8531a` |
-| `--bg` | `#0a0a0a` |
-| `--bg-alt` | `#080808` |
-| `--surface` | `#111111` |
-| Display font | Bebas Neue |
-| Body font | DM Sans |
-| Serif accent | DM Serif Display |
-
----
-
-
