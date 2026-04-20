@@ -1,0 +1,140 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--nav-height);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Content ───────────────────────────────────────────────────── */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 820px;
+  padding: 80px 48px;
+  animation: fadeUp 0.9s ease 0.1s both;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 28px;
+}
+
+.labelLine {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+
+/* ── Name ──────────────────────────────────────────────────────── */
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: clamp(72px, 10vw, 130px);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+  animation: fadeUp 1s ease 0.2s both;
+  user-select: none;
+}
+
+.nameLine {
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.accent {
+  color: var(--orange);
+}
+
+/* ── Sub & buttons ─────────────────────────────────────────────── */
+.sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.85;
+  margin-bottom: 36px;
+  animation: fadeUp 1s ease 0.35s both;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+  animation: fadeUp 1s ease 0.5s both;
+}
+
+.articleBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-faint);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  padding: 12px 8px;
+  transition: color 0.25s;
+}
+.articleBtn:hover {
+  color: var(--orange);
+  background: transparent;
+  transform: none;
+}
+
+/* ── Meta stats ────────────────────────────────────────────────── */
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  animation: fadeUp 1s ease 0.6s both;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.metaNum {
+  font-family: var(--font-display);
+  font-size: 36px;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.metaLabel {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.metaDivider {
+  width: 0.5px;
+  height: 36px;
+  background: var(--border);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

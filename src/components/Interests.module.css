@@ -1,0 +1,292 @@
+.section {
+  padding: 120px 0;
+  background: var(--bg);
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 72px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 6vw, 80px);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.sectionTitle em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--orange);
+  letter-spacing: -0.01em;
+}
+
+.headerNote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--text-faint);
+  max-width: 220px;
+  text-align: right;
+  line-height: 1.6;
+  padding-bottom: 8px;
+}
+
+/* ── Grid ───────────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2px;
+}
+
+.large  { grid-column: span 7; }
+.medium { grid-column: span 5; }
+.small  { grid-column: span 5; }
+
+.grid > *:nth-child(3) { grid-column: span 5; }
+.grid > *:nth-child(4) { grid-column: span 7; }
+
+/* ── Card ───────────────────────────────────────────────────────── */
+.card {
+  border: 0.5px solid var(--border);
+}
+
+.cardInner {
+  padding: 40px 36px;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: background 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardInner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: var(--orange);
+  transition: height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cardActive .cardInner {
+  background: rgba(232, 83, 26, 0.04);
+}
+
+.cardActive .cardInner::before {
+  height: 100%;
+}
+
+/* ── Card elements ──────────────────────────────────────────────── */
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.indexNum {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--orange);
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.category {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 44px);
+  letter-spacing: 0.03em;
+  line-height: 0.95;
+  color: var(--text);
+  margin-bottom: 18px;
+  overflow-wrap: break-word;
+}
+
+.large .headline {
+  font-size: clamp(36px, 4vw, 56px);
+}
+
+.body {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+/* ── Card bottom ────────────────────────────────────────────────── */
+.cardBottom {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.aside {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--orange);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.rule {
+  display: block;
+  flex: 1;
+  height: 0.5px;
+  background: var(--border);
+}
+
+/* ── Playlist section ───────────────────────────────────────────── */
+.playlistSection {
+  border-top: 0.5px solid var(--border);
+  padding-top: 64px;
+}
+ 
+.playlistHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+}
+ 
+.playlistLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+ 
+.playlistLabelLine {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+ 
+.playlistNote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text-faint);
+  max-width: 260px;
+  text-align: right;
+  line-height: 1.6;
+}
+ 
+/* ── Playlist grid ──────────────────────────────────────────────── */
+.playlistGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+ 
+/* ── Individual playlist card ───────────────────────────────────── */
+.playlistCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 20px;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+ 
+.playlistCard:hover {
+  border-color: var(--platform-color, var(--orange-dim));
+  transform: translateY(-3px);
+}
+ 
+.playlistCard:hover .playlistGlow {
+  opacity: 1;
+}
+ 
+.playlistGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 120%,
+    color-mix(in srgb, var(--platform-color, var(--orange)) 18%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+ 
+/* Card top row */
+.playlistCardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.platformBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+ 
+.externalArrow {
+  font-size: 14px;
+  color: var(--text-faint);
+  transition: color 0.25s, transform 0.25s;
+  line-height: 1;
+}
+ 
+.playlistCard:hover .externalArrow {
+  color: var(--platform-color, var(--orange));
+  transform: translate(2px, -2px);
+}
+ 
+/* Playlist name */
+.playlistName {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  line-height: 1;
+}
+ 
+/* Playlist description */
+.playlistDesc {
+  font-size: 12px;
+  color: var(--text-faint);
+  line-height: 1.7;
+  flex: 1;
+}
+ 

@@ -1,6 +1,6 @@
 # Mandisi Portfolio
 
-Personal portfolio website for Taropafadzwa Mandisi Chitumwa — Software Engineer, Johannesburg.
+Personal portfolio website for Taropafadzwa Mandisi Chitumwa - Software Engineer, Johannesburg.
 
 ## Tech stack
 

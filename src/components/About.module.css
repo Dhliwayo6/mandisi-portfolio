@@ -1,0 +1,115 @@
+.section {
+  padding: 120px 0;
+  background: var(--bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.text {
+  padding-top: 8px;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 4.5vw, 58px);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+
+.accent {
+  color: var(--orange);
+}
+
+.body {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 18px;
+  max-width: 480px;
+}
+
+.articleLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border-bottom: 1px solid rgba(232, 83, 26, 0.3);
+  padding-bottom: 4px;
+  margin-top: 12px;
+  transition: border-color 0.25s, gap 0.25s;
+}
+
+.articleLink:hover {
+  border-color: var(--orange);
+  gap: 10px;
+}
+
+.visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.imageWrap {
+  overflow: hidden;
+  border-radius: 3px;
+  height: 300px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.imageWrap:hover .image {
+  transform: scale(1.04);
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.statCard {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 3px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.3s;
+}
+
+.statCard:hover {
+  border-color: var(--border-hover);
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 36px;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  line-height: 1.4;
+}
