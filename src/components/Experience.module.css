@@ -154,8 +154,7 @@
  
   .sidebar { position: static; }
  
-  /* .imageWrap { display: none; } */
- 
+  .imageWrap { display: block; height: 280px; } 
   .expHeader {
     flex-direction: column;
     gap: 4px;
