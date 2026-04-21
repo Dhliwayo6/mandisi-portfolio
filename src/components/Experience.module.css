@@ -152,10 +152,9 @@
     gap: 48px;
   }
  
-  /* Unstick sidebar on mobile */
   .sidebar { position: static; }
  
-  .imageWrap { display: none; }
+  /* .imageWrap { display: none; } */
  
   .expHeader {
     flex-direction: column;
