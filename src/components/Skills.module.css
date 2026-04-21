@@ -92,3 +92,17 @@
   color: var(--orange);
   letter-spacing: 0.04em;
 }
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 80px 0; }
+ 
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+ 
+  .certsGrid { grid-template-columns: 1fr; }
+}
+ 

@@ -289,4 +289,41 @@
   line-height: 1.7;
   flex: 1;
 }
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 80px 0 100px; }
+ 
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+ 
+  .headerNote { text-align: left; max-width: 100%; }
+ 
+  .grid { grid-template-columns: 1fr; gap: 2px; margin-bottom: 56px; }
+  .large, .medium, .small { grid-column: span 1; }
+  .grid > *:nth-child(3) { grid-column: span 1; }
+  .grid > *:nth-child(4) { grid-column: span 1; }
+ 
+  .cardInner { min-height: 0; padding: 28px 24px; }
+  .large .headline { font-size: clamp(28px, 8vw, 40px); }
+ 
+  .playlistHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .playlistNote { text-align: left; max-width: 100%; }
+ 
+  .playlistGrid { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
+ 
+@media (max-width: 480px) {
+  .playlistGrid { grid-template-columns: 1fr; }
+}
+ 
  

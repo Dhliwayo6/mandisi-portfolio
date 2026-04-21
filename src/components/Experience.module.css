@@ -142,3 +142,25 @@
   letter-spacing: 0.04em;
   font-style: italic;
 }
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 80px 0; }
+ 
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+ 
+  /* Unstick sidebar on mobile */
+  .sidebar { position: static; }
+ 
+  .imageWrap { display: none; }
+ 
+  .expHeader {
+    flex-direction: column;
+    gap: 4px;
+  }
+ 
+  .expPeriod { white-space: normal; }
+}

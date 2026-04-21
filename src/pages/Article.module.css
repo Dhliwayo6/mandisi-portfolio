@@ -200,3 +200,24 @@
 .backLink:hover {
   color: var(--orange);
 }
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero { height: 55vh; min-height: 380px; }
+  .heroContent { padding: 0 20px 36px; }
+ 
+  .title { font-size: clamp(44px, 11vw, 68px); }
+  .deck { font-size: 15px; }
+  .byline { flex-wrap: wrap; gap: 6px; }
+ 
+  .article { padding: 56px 20px 56px; }
+  .article p { font-size: 15px; }
+  .blockquote { font-size: 16px; padding-left: 20px; margin: 28px 0; }
+  .sectionHeading { font-size: 24px; }
+  .subheading { font-size: 20px; }
+ 
+  .inlineImg { margin: 36px -20px; }
+  .imgCaption { padding: 0 20px; }
+ 
+  .back { padding: 20px 20px 48px; }
+}

@@ -204,4 +204,17 @@ img {
 .bleed-alt.bleed-bottom::after {
   background: linear-gradient(to top, #080808, transparent);
 }
+
+/* ── Global mobile fixes ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+ 
+  .section-title {
+    font-size: clamp(36px, 9vw, 52px);
+    margin-bottom: 32px;
+  }
+}
+ 
  

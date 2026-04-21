@@ -113,3 +113,20 @@
   color: var(--text-faint);
   line-height: 1.4;
 }
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 80px 0; }
+ 
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+ 
+  .visuals { order: -1; }
+ 
+  .imageWrap { height: 240px; }
+ 
+  .body { max-width: 100%; }
+}
+ 

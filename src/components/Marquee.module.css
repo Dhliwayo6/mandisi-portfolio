@@ -126,3 +126,10 @@
   }
 }
 
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .pill { padding: 5px 12px; }
+  .label { font-size: 11px; }
+  .symbol { font-size: 13px; }
+}
+

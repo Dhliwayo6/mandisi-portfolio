@@ -227,3 +227,26 @@
   border-color: rgba(232, 83, 26, 0.5);
   box-shadow: 0 0 8px rgba(232, 83, 26, 0.15);
 }
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 80px 0; }
+ 
+  .header { flex-direction: column; align-items: flex-start; gap: 4px; margin-bottom: 36px; }
+ 
+  .featured {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+  }
+ 
+  /* Hide the large ghost number on mobile — wastes space */
+  .featuredRight { display: none; }
+ 
+  .projName { font-size: 26px; }
+  .projDesc { max-width: 100%; font-size: 13px; }
+ 
+  /* Stack project cards single column */
+  .grid { grid-template-columns: 1fr; }
+ 
+  .card { padding: 20px; }
+}

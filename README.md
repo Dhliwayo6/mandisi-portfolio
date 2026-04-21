@@ -73,7 +73,7 @@ npm run preview
 
 ## Updating content
 
-All editable content — projects, skills, experience, certifications — lives in one place:
+All editable content, projects, skills, experience, certifications, lives in one place:
 
 ```
 src/data/content.js
