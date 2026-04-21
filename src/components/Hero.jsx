@@ -54,7 +54,7 @@ export default function Hero() {
           <div className={styles.metaDivider} />
 
           <div className={styles.metaItem}>
-            <span className={styles.metaNum}>3+</span>
+            <span className={styles.metaNum}>17</span>
             <span className={styles.metaLabel}>
               Certifications & Licenses
             </span>

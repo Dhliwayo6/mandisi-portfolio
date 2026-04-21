@@ -41,7 +41,7 @@ export default function About() {
                 <span className={styles.statLabel}>Projects </span>
               </div>
               <div className={styles.statCard}>
-                <span className={styles.statNum}>3+</span>
+                <span className={styles.statNum}>17</span>
                 <span className={styles.statLabel}>Certifications & Licenses</span>
               </div>
               <div className={styles.statCard}>
